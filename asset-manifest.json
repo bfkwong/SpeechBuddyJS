@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/SpeechBuddyJS/static/css/main.2b18ca31.chunk.css",
+    "main.js": "/SpeechBuddyJS/static/js/main.041d2a21.chunk.js",
+    "main.js.map": "/SpeechBuddyJS/static/js/main.041d2a21.chunk.js.map",
+    "runtime-main.js": "/SpeechBuddyJS/static/js/runtime-main.dd5a16ed.js",
+    "runtime-main.js.map": "/SpeechBuddyJS/static/js/runtime-main.dd5a16ed.js.map",
+    "static/css/2.af3c1da9.chunk.css": "/SpeechBuddyJS/static/css/2.af3c1da9.chunk.css",
+    "static/js/2.d606822d.chunk.js": "/SpeechBuddyJS/static/js/2.d606822d.chunk.js",
+    "static/js/2.d606822d.chunk.js.map": "/SpeechBuddyJS/static/js/2.d606822d.chunk.js.map",
+    "index.html": "/SpeechBuddyJS/index.html",
+    "precache-manifest.2dddddd8cecdc8208989efc5b32732e2.js": "/SpeechBuddyJS/precache-manifest.2dddddd8cecdc8208989efc5b32732e2.js",
+    "service-worker.js": "/SpeechBuddyJS/service-worker.js",
+    "static/css/2.af3c1da9.chunk.css.map": "/SpeechBuddyJS/static/css/2.af3c1da9.chunk.css.map",
+    "static/css/main.2b18ca31.chunk.css.map": "/SpeechBuddyJS/static/css/main.2b18ca31.chunk.css.map",
+    "static/js/2.d606822d.chunk.js.LICENSE.txt": "/SpeechBuddyJS/static/js/2.d606822d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.dd5a16ed.js",
+    "static/css/2.af3c1da9.chunk.css",
+    "static/js/2.d606822d.chunk.js",
+    "static/css/main.2b18ca31.chunk.css",
+    "static/js/main.041d2a21.chunk.js"
+  ]
+}
