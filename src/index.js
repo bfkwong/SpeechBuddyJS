@@ -18,3 +18,5 @@ ReactDOM.render(
   </Provider>,
   document.getElementById("root")
 );
+
+// This is where the app loads from
