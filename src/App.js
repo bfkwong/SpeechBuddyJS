@@ -3,6 +3,7 @@ import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import "./App.css";
 import SingleText from "./components/SingleText/SingleText";
 import MultiText from "./components/MultiText/MultiText";
+import TwoTxtSent from "./components/TwoTxtSent/TwoTxtSent";
 
 const SINGLE_TEXT = "SINGLE_TEXT";
 const MULTI_TEXT = "MULTI_TEXT";
@@ -43,6 +44,7 @@ function App() {
       </Navbar>
       {display === SINGLE_TEXT && <SingleText></SingleText>}
       {display === MULTI_TEXT && <MultiText></MultiText>}
+      {display === PLAGIARISM_TEXT && <TwoTxtSent></TwoTxtSent>}
     </div>
   );
 }
