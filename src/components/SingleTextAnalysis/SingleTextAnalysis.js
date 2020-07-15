@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Table } from "react-bootstrap";
+import { Container, Table } from "react-bootstrap";
 import { Radar, Bar } from "react-chartjs-2";
 import "./SingleTextAnalysis.css";
 

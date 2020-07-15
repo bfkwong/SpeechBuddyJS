@@ -21,17 +21,20 @@ function MultiText() {
   const [analysis, setAnalysis] = useState([]);
   const [fileContents, setFileContents] = useState([]);
 
-  const onDrop = useCallback((acceptedFiles) => {
-    acceptedFiles.forEach((file) => {
-      const reader = new FileReader();
-      reader.onload = () => {
-        const string = reader.result;
-        fileContents.push(string);
-        setFileContents(fileContents);
-      };
-      reader.readAsText(file);
-    });
-  }, []);
+  const onDrop = useCallback(
+    (acceptedFiles) => {
+      acceptedFiles.forEach((file) => {
+        const reader = new FileReader();
+        reader.onload = () => {
+          const string = reader.result;
+          fileContents.push(string);
+          setFileContents(fileContents);
+        };
+        reader.readAsText(file);
+      });
+    },
+    [fileContents]
+  );
 
   const { acceptedFiles, getRootProps, getInputProps } = useDropzone({
     onDrop

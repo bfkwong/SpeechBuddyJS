@@ -1,12 +1,5 @@
-import React, { useState, useEffect } from "react";
-import {
-  Navbar,
-  Nav,
-  NavDropdown,
-  Form,
-  FormControl,
-  Button
-} from "react-bootstrap";
+import React, { useState } from "react";
+import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import "./App.css";
 import SingleText from "./components/SingleText/SingleText";
 import MultiText from "./components/MultiText/MultiText";
