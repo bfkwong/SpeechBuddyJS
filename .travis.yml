@@ -8,10 +8,3 @@ script:
   - npm run build
 env:
   - CI=false
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: ce1e8b34b8c3f208e437998924bc3f58e616233b
-  local_dir: build
-  on:
-    branch: master
