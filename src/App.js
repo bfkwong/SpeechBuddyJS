@@ -24,11 +24,11 @@ function App() {
               <NavDropdown.Item onClick={() => setDisplay(SINGLE_TEXT)}>
                 Single Text Analysis
               </NavDropdown.Item>
+              <NavDropdown.Item onClick={() => setDisplay(PLAGIARISM_TEXT)}>
+                Two Text Analysis
+              </NavDropdown.Item>
               <NavDropdown.Item onClick={() => setDisplay(MULTI_TEXT)}>
                 Multi Text Analysis
-              </NavDropdown.Item>
-              <NavDropdown.Item onClick={() => setDisplay(PLAGIARISM_TEXT)}>
-                Plagiarism Analysis
               </NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Speech Analysis" id="basic-nav-dropdown">
