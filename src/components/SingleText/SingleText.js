@@ -26,17 +26,14 @@ function SingleText() {
     let wordTok = new natural.WordTokenizer();
     let tokenizedWords = wordTok.tokenize(textArea);
 
-    let wordCount = {};
+    let wrdCnt = {};
     tokenizedWords.forEach((word) => {
-      if (wordCount[word] === undefined) {
-        wordCount[word] = 0;
+      if (wrdCnt[word] === undefined) {
+        wrdCnt[word] = 0;
       }
-      wordCount[word] += 1;
+      wrdCnt[word] += 1;
     });
-    let wordCountPair = Object.keys(wordCount).map((key) => [
-      key,
-      wordCount[key]
-    ]);
+    let wordCountPair = Object.keys(wrdCnt).map((key) => [key, wrdCnt[key]]);
     wordCountPair.sort(function (a, b) {
       // Sort by the 2nd value in each array
       if (a[1] === b[1]) return 0;
