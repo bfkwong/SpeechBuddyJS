@@ -6,7 +6,6 @@ cache:
     - node_modules
 script:
   - npm run build
-  - sonar-scanner
 env:
   - CI=false
 addons:
