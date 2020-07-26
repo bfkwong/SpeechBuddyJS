@@ -6,3 +6,19 @@
 h3 {
   margin-top: 10px;
 }
+
+.TwoTxtSent__cardText {
+  padding-bottom: 20px;
+}
+
+.TwoTxtSent__cardWrapper {
+  margin-bottom: 20px;
+}
+
+.TwoTxtSent__col {
+  text-align: left;
+}
+
+.TwoTxtSent__row {
+  margin-top: 20px;
+}

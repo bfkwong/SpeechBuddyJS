@@ -18,3 +18,11 @@ p {
   vertical-align: middle !important;
   height: 100%;
 }
+
+.SingleTxtAnalysis__h3 {
+  padding-bottom: 20px;
+}
+
+.SingleTxtAnalysis__h5 {
+  text-align: left;
+}

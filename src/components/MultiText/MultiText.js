@@ -68,7 +68,7 @@ function MultiText() {
             <input {...getInputProps()} />
             <p>Drag 'n' drop some files here, or click to select files</p>
           </StyledDiv>
-          <aside style={{ paddingTop: "20px", textAlign: "left" }}>
+          <aside className="MultiTxt__aside">
             <h4>Uploaded Files</h4>
             <Container>
               <Row>
@@ -90,7 +90,7 @@ function MultiText() {
         </Row>
       </Container>
       {analysis.length > 0 && (
-        <Container style={{ marginTop: "20px" }}>
+        <Container className="MultiTxt__analysisContainer">
           <Row className="justify-content-md-center">
             <Col>
               <Table>

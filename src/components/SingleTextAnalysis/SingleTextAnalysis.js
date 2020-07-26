@@ -10,9 +10,9 @@ function SingleTextAnalysis(props) {
 
   return (
     <Container className="SingleTextAnalysis">
-      <h3 style={{ paddingBottom: "20px" }}>Text Analysis</h3>
+      <h3 className="SingleTxtAnalysis__h3">Text Analysis</h3>
 
-      <h5 style={{ textAlign: "left" }}>Top Ten Words</h5>
+      <h5 className="SingleTxtAnalysis__h5">Top Ten Words</h5>
       <Bar
         data={{
           labels: props.analysis.topTenWords.map((v) => v[0]),
@@ -35,7 +35,7 @@ function SingleTextAnalysis(props) {
           }
         }}></Bar>
 
-      <h5 style={{ textAlign: "left" }}>Sentiment Analysis</h5>
+      <h5 className="SingleTxtAnalysis__h5">Sentiment Analysis</h5>
       <Table striped bordered hover>
         <tbody>
           <tr>
@@ -45,7 +45,7 @@ function SingleTextAnalysis(props) {
         </tbody>
       </Table>
 
-      <h5 style={{ textAlign: "left" }}>Toxicity Analysis</h5>
+      <h5 className="SingleTxtAnalysis__h5">Toxicity Analysis</h5>
       <Radar
         data={{
           labels: props.analysis.toxicity.map((t) => t.label),

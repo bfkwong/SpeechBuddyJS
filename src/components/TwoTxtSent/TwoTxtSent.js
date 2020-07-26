@@ -12,6 +12,7 @@ import {
 import natural from "natural";
 import * as use from "@tensorflow-models/universal-sentence-encoder";
 import * as similarity from "compute-cosine-similarity";
+import "./TwoTxtSent";
 
 const LOADING_MODEL = "Loading Text Analysis Models ...";
 const ANALYZING_TXT1 = "Embedding Text 1 ...";
@@ -107,9 +108,7 @@ function TwoTxtSent() {
           </Col>
         </Row>
         {analysisStatus !== "DONE" && (
-          <Row
-            className="justify-content-md-center"
-            style={{ marginTop: "20px" }}>
+          <Row className="justify-content-md-center TwoTxtSent__row">
             <Col md={1}>
               <Spinner animation="border" role="status"></Spinner>
             </Col>
@@ -119,13 +118,13 @@ function TwoTxtSent() {
           </Row>
         )}
         <Row>
-          <Col style={{ textAlign: "left" }}>
+          <Col className="TwoTxtSent__col">
             {jwdAnalysis.map((sent, i) => (
-              <Card key={i} style={{ marginBottom: "20px" }}>
+              <Card key={i} className="TwoTxtSent__cardWrapper">
                 <Card.Body>
                   <Card.Title>Cosine Distance: {sent.jwd}</Card.Title>
                   <Card.Subtitle>Text 1</Card.Subtitle>
-                  <Card.Text style={{ paddingBottom: "20px" }}>
+                  <Card.Text className="TwoTxtSent__cardText">
                     {sent.sent1}
                   </Card.Text>
                   <Card.Subtitle>Text 2</Card.Subtitle>
