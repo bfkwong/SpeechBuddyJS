@@ -8,14 +8,3 @@ script:
   - npm run build
 env:
   - CI=false
-addons:
-  sonarcloud:
-    organization: "bfkwong"
-    token:
-      secure: "6e8e85c1deaa7e7fda8e24b67c9a5909462a18d2" # encrypted value of your token
-deploy:
-  provider: pages
-  skip_cleanup: true
-  keep_history: true
-  on:
-    branch: master
