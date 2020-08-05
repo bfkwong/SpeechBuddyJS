@@ -1,0 +1,3 @@
+As a college professor, I want to verify my students are not plagiarizing in their speeches by copying quotes or phrases from other speeches without citation, so that I can ensure fair and original work from students on college papers related to topics in my class.
+As a student user, I want to check my written papers for uncited thoughts, quotes, or ideas that came from other speeches, so that I can make edits to my paper to cite my sources and understand where my original thoughts originated from.
+As a speech writer user, I want to analyze multiple speeches of my choice for common words and phrases, so that I can understand the connection and influence of earlier written speeches on modern day thought and ideas in speech writing.

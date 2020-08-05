@@ -1,0 +1,5 @@
+1. As a student user, I want to receive feedback on my grammar, filler words, and word diversity, so that I can improve my speech skills. 
+
+2. As a professional user, I want to be linked to other great speeches that are similar to my own, so that I can create a more inspired and focused speech. 
+
+3. As an educator, I want to compare similar speeches to analyze specific phrasings and word choice, so that I can detect cheating in my classroom.

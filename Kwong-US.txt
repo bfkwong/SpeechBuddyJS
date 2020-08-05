@@ -1,0 +1,14 @@
+User Stories:
+
+User Story 1: 
+
+As a student user, I would like an application that can analyze my text for grammatical mistakes, so that I can improve my writing by making it mistake-free. 
+
+User Story 2: 
+
+As a professor user, I would like an application that can analyze a set of text documents and determine if any of them are unusually similar to each other, so that I can be alerted of any potential plagiarism that may be occurring between students. 
+
+User Story 3: 
+
+As a speaker user, I would like to be able to speak into an application and have the application provide feedback to me about my speech, so that I can improve as a public speaker. 
+ 
