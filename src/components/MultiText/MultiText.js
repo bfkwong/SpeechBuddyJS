@@ -40,7 +40,12 @@ function MultiText() {
     onDrop
   });
 
-  const filesUpload = acceptedFiles.map((file, i) => file.path);
+  const filesUpload = acceptedFiles.map(file => (
+    <li key={file.path}>
+      {file.path}
+    </li>
+  ));
+
 
   const runAnalysis = async () => {
     let model = await use.load();
@@ -64,21 +69,13 @@ function MultiText() {
       <h1>Multi Text Analysis</h1>
       <div className="dropdown-container">
         <section className="container">
-          <StyledDiv {...getRootProps({ className: "dropzone" })}>
+          <StyledDiv {...getRootProps({ className: "dropzone"})}>
             <input {...getInputProps()} />
             <p>Drag 'n' drop some files here, or click to select files</p>
           </StyledDiv>
           <aside className="MultiTxt__aside">
             <h4>Uploaded Files</h4>
-            <Container>
-              <Row>
-                {filesUpload.map((f, i) => (
-                  <Col md={2} key={i}>
-                    <p>{f}</p>
-                  </Col>
-                ))}
-              </Row>
-            </Container>
+            <ul>{filesUpload}</ul>
           </aside>
         </section>
       </div>
