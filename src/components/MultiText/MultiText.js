@@ -22,8 +22,8 @@ function MultiText() {
   const [fileContents, setFileContents] = useState([]);
 
   const onDrop = useCallback(
-    (onDropFiles) => {
-      onDropFiles.forEach((file) => {
+    (acceptedFiles) => {
+      acceptedFiles.forEach((file) => {
         const reader = new FileReader();
         reader.onload = () => {
           const string = reader.result;
@@ -45,7 +45,6 @@ function MultiText() {
       {file.path}
     </li>
   ));
-
 
   const runAnalysis = async () => {
     let model = await use.load();
