@@ -6,6 +6,7 @@ import * as use from "@tensorflow-models/universal-sentence-encoder";
 import * as similarity from "compute-cosine-similarity";
 import * as natural from "natural";
 import "./MultiText.css";
+import { Link } from "react-router-dom";
 
 const StyledDiv = styled.div`
   background-color: #d1f0f0;
@@ -40,10 +41,8 @@ function MultiText() {
     onDrop
   });
 
-  const filesUpload = acceptedFiles.map(file => (
-    <li key={file.path}>
-      {file.path}
-    </li>
+  const filesUpload = acceptedFiles.map((file) => (
+    <li key={file.path}>{file.path}</li>
   ));
 
   const runAnalysis = async () => {
@@ -57,7 +56,14 @@ function MultiText() {
       for (let j = i + 1; j < arr.length; j++) {
         let csd = similarity(arr[i], arr[j]);
         let jwd = natural.JaroWinklerDistance(fileContents[i], fileContents[j]);
-        output.push([filesUpload[i], filesUpload[j], csd, jwd]);
+        output.push([
+          filesUpload[i],
+          filesUpload[j],
+          csd,
+          jwd,
+          fileContents[i],
+          fileContents[j]
+        ]);
       }
     }
     setAnalysis(output);
@@ -68,7 +74,7 @@ function MultiText() {
       <h1>Multi Text Analysis</h1>
       <div className="dropdown-container">
         <section className="container">
-          <StyledDiv {...getRootProps({ className: "dropzone"})}>
+          <StyledDiv {...getRootProps({ className: "dropzone" })}>
             <input {...getInputProps()} />
             <p>Drag 'n' drop some files here, or click to select files</p>
           </StyledDiv>
@@ -96,15 +102,28 @@ function MultiText() {
                     <th>Text</th>
                     <th>Cosine Similarity</th>
                     <th>Jaro Winkler Similarity</th>
+                    <th>Two Text Analysis</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {analysis.map((a, i) => (
+                  {analysis.map((an, i) => (
                     <tr key={i}>
-                      <td>{a[0]}</td>
-                      <td>{a[1]}</td>
-                      <td>{a[2]}</td>
-                      <td>{a[3]}</td>
+                      <td>{an[0]}</td>
+                      <td>{an[1]}</td>
+                      <td>{an[2]}</td>
+                      <td>{an[3]}</td>
+                      <td>
+                        <Link
+                          to={{
+                            pathname: "/two_txt_plag",
+                            multTextProps: {
+                              txt1: an[4],
+                              txt2: an[5]
+                            }
+                          }}>
+                          Analyze
+                        </Link>
+                      </td>
                     </tr>
                   ))}
                 </tbody>

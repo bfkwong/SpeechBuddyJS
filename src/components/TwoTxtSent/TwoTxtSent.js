@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import {
   Container,
   Row,
@@ -23,7 +23,7 @@ const ANALYZING_TXT2 = "Embedding Text 2 ...";
 const FINALIZING = "Finalizing Analysis ...";
 const DONE = "DONE";
 
-function TwoTxtSent() {
+function TwoTxtSent(props) {
   const [txt1, settxt1] = useState("");
   const [txt2, settxt2] = useState("");
   const [analysisStatus, setanalysisStatus] = useState("DONE");
@@ -77,43 +77,66 @@ function TwoTxtSent() {
     }
   };
 
-  const runAnalysis = async () => {
-    setanalysisStatus(LOADING_MODEL);
-    let model = await use.load();
-    let sentTok = new natural.SentenceTokenizer();
-    let txt1Sent = sentTok.tokenize(txt1);
-    let txt2Sent = sentTok.tokenize(txt2);
-
-    setanalysisStatus(ANALYZING_TXT1);
-    let embeddings1 = await model.embed(txt1Sent);
-    let values1 = embeddings1.arraySync();
-    let arr1 = Array.from(values1);
-
-    setanalysisStatus(ANALYZING_TXT2);
-    let embeddings2 = await model.embed(txt2Sent);
-    let values2 = embeddings2.arraySync();
-    let arr2 = Array.from(values2);
-
-    setanalysisStatus(FINALIZING);
-    let res = [];
-    for (let sent1 = 0; sent1 < txt1Sent.length; sent1++) {
-      for (let sent2 = 0; sent2 < txt2Sent.length; sent2++) {
-        res.push({
-          sent1: txt1Sent[sent1],
-          sent2: txt2Sent[sent2],
-          jwd: similarity(arr1[sent1], arr2[sent2])
-        });
+  const runAnalysis = useCallback(
+    async (text1, text2) => {
+      if (text1 === undefined) {
+        text1 = txt1;
       }
+      if (text2 === undefined) {
+        text2 = txt2;
+      }
+
+      setanalysisStatus(LOADING_MODEL);
+      let model = await use.load();
+      let sentTok = new natural.SentenceTokenizer();
+      let txt1Sent = sentTok.tokenize(text1);
+      let txt2Sent = sentTok.tokenize(text2);
+
+      console.log(txt1Sent, txt2Sent);
+
+      setanalysisStatus(ANALYZING_TXT1);
+      let embeddings1 = await model.embed(txt1Sent);
+      let values1 = embeddings1.arraySync();
+      let arr1 = Array.from(values1);
+
+      setanalysisStatus(ANALYZING_TXT2);
+      let embeddings2 = await model.embed(txt2Sent);
+      let values2 = embeddings2.arraySync();
+      let arr2 = Array.from(values2);
+
+      setanalysisStatus(FINALIZING);
+      let res = [];
+      for (let sent1 = 0; sent1 < txt1Sent.length; sent1++) {
+        for (let sent2 = 0; sent2 < txt2Sent.length; sent2++) {
+          res.push({
+            sent1: txt1Sent[sent1],
+            sent2: txt2Sent[sent2],
+            jwd: similarity(arr1[sent1], arr2[sent2])
+          });
+        }
+      }
+
+      res.sort((a, b) => {
+        if (a.jwd === b.jwd) return 0;
+        return a.jwd < b.jwd ? 1 : -1;
+      });
+
+      setjwdAnalysis(res);
+      setanalysisStatus(DONE);
+    },
+    [txt1, txt2]
+  );
+
+  useEffect(() => {
+    if (props && props.location && props.location.multTextProps) {
+      settxt1(props.location.multTextProps.txt1);
+      settxt2(props.location.multTextProps.txt2);
+      runAnalysis(
+        props.location.multTextProps.txt1,
+        props.location.multTextProps.txt2
+      );
     }
-
-    res.sort((a, b) => {
-      if (a.jwd === b.jwd) return 0;
-      return a.jwd < b.jwd ? 1 : -1;
-    });
-
-    setjwdAnalysis(res);
-    setanalysisStatus(DONE);
-  };
+  }, [props, runAnalysis]);
 
   return (
     <div className="TopLevelDisplay">
@@ -143,7 +166,7 @@ function TwoTxtSent() {
             </Button>
           </Col>
           <Col>
-            <h3>Text 1</h3>
+            <h3>Text 2</h3>
             <InputGroup>
               <FormControl
                 className="main-text-area"
