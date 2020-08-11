@@ -7,12 +7,15 @@ import {
   FormControl,
   Button,
   Card,
-  Spinner
+  Spinner,
+  Modal
 } from "react-bootstrap";
 import natural from "natural";
 import * as use from "@tensorflow-models/universal-sentence-encoder";
+import * as toxicity from "@tensorflow-models/toxicity";
 import * as similarity from "compute-cosine-similarity";
 import "./TwoTxtSent";
+import SingleTextAnalysis from "../SingleTextAnalysis/SingleTextAnalysis";
 
 const LOADING_MODEL = "Loading Text Analysis Models ...";
 const ANALYZING_TXT1 = "Embedding Text 1 ...";
@@ -25,6 +28,55 @@ function TwoTxtSent() {
   const [txt2, settxt2] = useState("");
   const [analysisStatus, setanalysisStatus] = useState("DONE");
   const [jwdAnalysis, setjwdAnalysis] = useState([]);
+  const [textAnalysis, setTextAnalysis] = useState({});
+  const [showModal, setshowModal] = useState(false);
+
+  const closeModal = () => {
+    setshowModal(false);
+  };
+
+  const runSingleAnalysis = async (text) => {
+    let wordTok = new natural.WordTokenizer();
+    let tokenizedWords = wordTok.tokenize(text);
+
+    let wrdCnt = {};
+    tokenizedWords.forEach((word) => {
+      if (wrdCnt[word] === undefined) {
+        wrdCnt[word] = 0;
+      }
+      wrdCnt[word] += 1;
+    });
+    let wordCountPair = Object.keys(wrdCnt).map((key) => [key, wrdCnt[key]]);
+    wordCountPair.sort(function (a, b) {
+      // Sort by the 2nd value in each array
+      if (a[1] === b[1]) return 0;
+      return a[1] < b[1] ? 1 : -1;
+    });
+    let topTenWords =
+      wordCountPair.length > 20 ? wordCountPair.slice(0, 20) : wordCountPair;
+
+    let analyzer = new natural.SentimentAnalyzer(
+      "English",
+      natural.PorterStemmer,
+      "afinn"
+    );
+
+    let toxModel = await toxicity.load();
+    if (toxModel) {
+      let predictions = await toxModel.classify([text]);
+      if (!predictions) {
+        alert("prediction failed");
+        return;
+      }
+      setTextAnalysis({
+        sentiment: analyzer.getSentiment(tokenizedWords),
+        toxicity: predictions,
+        topTenWords: topTenWords
+      });
+      setshowModal(true);
+    }
+  };
+
   const runAnalysis = async () => {
     setanalysisStatus(LOADING_MODEL);
     let model = await use.load();
@@ -81,6 +133,14 @@ function TwoTxtSent() {
                 onChange={(e) => settxt1(e.target.value)}
               />
             </InputGroup>
+            <Button
+              variant="primary"
+              className="analyze-button"
+              onClick={() => {
+                runSingleAnalysis(txt1);
+              }}>
+              Analyze Text 1
+            </Button>
           </Col>
           <Col>
             <h3>Text 1</h3>
@@ -95,6 +155,14 @@ function TwoTxtSent() {
                 onChange={(e) => settxt2(e.target.value)}
               />
             </InputGroup>
+            <Button
+              variant="primary"
+              className="analyze-button"
+              onClick={() => {
+                runSingleAnalysis(txt2);
+              }}>
+              Analyze Text 2
+            </Button>
           </Col>
         </Row>
         <Row className="justify-content-md-center">
@@ -103,7 +171,7 @@ function TwoTxtSent() {
               variant="primary"
               className="analyze-button"
               onClick={() => runAnalysis()}>
-              Analyze
+              Analyze For Plagiarism
             </Button>
           </Col>
         </Row>
@@ -135,6 +203,19 @@ function TwoTxtSent() {
           </Col>
         </Row>
       </Container>
+      <Modal show={showModal} onHide={closeModal}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <SingleTextAnalysis analysis={textAnalysis}></SingleTextAnalysis>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={closeModal}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   );
 }
