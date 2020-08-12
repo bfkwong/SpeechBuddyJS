@@ -115,7 +115,7 @@ function MultiText() {
                       <td>
                         <Link
                           to={{
-                            pathname: "/two_txt_plag",
+                            pathname: "/SpeechBuddyJS/two_txt_plag",
                             multTextProps: {
                               txt1: an[4],
                               txt2: an[5]

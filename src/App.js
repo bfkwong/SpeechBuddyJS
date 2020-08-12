@@ -12,19 +12,25 @@ function App() {
     <BrowserRouter>
       <div>
         <Navbar bg="light" expand="lg">
-          <Navbar.Brand href="/home">Speech Buddy</Navbar.Brand>
+          <Navbar.Brand href="/SpeechBuddyJS/home">Speech Buddy</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
               <NavDropdown title="Text Analysis" id="basic-nav-dropdown">
                 <NavDropdown.Item as="span">
-                  <Link to="/single_text">Single Text Analysis</Link>
+                  <Link to="/SpeechBuddyJS/single_text">
+                    Single Text Analysis
+                  </Link>
                 </NavDropdown.Item>
                 <NavDropdown.Item as="span">
-                  <Link to="/two_txt_plag">Two Text Analysis</Link>
+                  <Link to="/SpeechBuddyJS/two_txt_plag">
+                    Two Text Analysis
+                  </Link>
                 </NavDropdown.Item>
                 <NavDropdown.Item as="span">
-                  <Link to="/multi_text">Multi Text Analysis</Link>
+                  <Link to="/SpeechBuddyJS/multi_text">
+                    Multi Text Analysis
+                  </Link>
                 </NavDropdown.Item>
               </NavDropdown>
               <NavDropdown title="Speech Analysis" id="basic-nav-dropdown">
@@ -38,17 +44,20 @@ function App() {
         </Navbar>
 
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/SpeechBuddyJS">
             <HomePage></HomePage>
           </Route>
-          <Route exact path="/home">
+          <Route exact path="/SpeechBuddyJS/home">
             <HomePage></HomePage>
           </Route>
-          <Route exact path="/single_text">
+          <Route exact path="/SpeechBuddyJS/single_text">
             <SingleText></SingleText>
           </Route>
-          <Route exact path="/two_txt_plag" component={TwoTxtSent}></Route>
-          <Route exact path="/multi_text">
+          <Route
+            exact
+            path="/SpeechBuddyJS/two_txt_plag"
+            component={TwoTxtSent}></Route>
+          <Route exact path="/SpeechBuddyJS/multi_text">
             <MultiText></MultiText>
           </Route>
         </Switch>
