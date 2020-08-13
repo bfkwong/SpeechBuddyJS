@@ -15,3 +15,11 @@
   background-color: #3587a4 !important;
   border-color: #3587a4 !important;
 }
+
+img {
+  display: block;
+  max-width:25px;
+  max-height:25px;
+  width: auto;
+  height: auto;
+}

@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import natural from "natural";
 import * as toxicity from "@tensorflow-models/toxicity";
+import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import {
   Container,
   Row,
   Col,
   InputGroup,
   FormControl,
-  Button
+  Button, ButtonGroup
 } from "react-bootstrap";
 import "./SingleText.css";
 
@@ -22,9 +23,11 @@ function SingleText() {
   const [adjPerc, setAdjPerc] = useState(0);
   const [textAnalysis, setTextAnalysis] = useState({});
 
+  const { transcript, resetTranscript } = useSpeechRecognition();
+
   const runAnalysis = async () => {
     let wordTok = new natural.WordTokenizer();
-    let tokenizedWords = wordTok.tokenize(textArea);
+    let tokenizedWords = wordTok.tokenize(transcript || textArea);
 
     let wrdCnt = {};
     tokenizedWords.forEach((word) => {
@@ -50,7 +53,7 @@ function SingleText() {
 
     let toxModel = await toxicity.load();
     if (toxModel) {
-      let predictions = await toxModel.classify([textArea]);
+      let predictions = await toxModel.classify([textArea || transcript]);
       if (!predictions) {
         alert("prediction failed");
         return;
@@ -93,7 +96,7 @@ function SingleText() {
               aria-label="With textarea"
               rows="15"
               placeholder="Enter your text document here ..."
-              value={textArea}
+              value={textArea || transcript} 
               onChange={(e) => {
                 setTextArea(e.target.value);
                 let wordTok = new natural.WordTokenizer();
@@ -133,6 +136,20 @@ function SingleText() {
               onClick={() => runAnalysis()}>
               Analyze
             </Button>
+          </Col>
+          <Col xs={8} md={12}>
+            <ButtonGroup>
+              <Button onClick={SpeechRecognition.startListening}>
+                <img
+                  width="500" height="500"
+                  src="https://img.pngio.com/record-button-png-6-png-image-record-png-2400_2093.png"
+                  alt="my image"
+                />
+              </Button>
+              <Button onClick={SpeechRecognition.stopListening}>Stop</Button>
+              <Button onClick={resetTranscript}>Clear</Button>
+              
+            </ButtonGroup>
           </Col>
         </Row>
         <Row>
