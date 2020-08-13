@@ -213,7 +213,7 @@ function TwoTxtSent(props) {
             {jwdAnalysis.map((sent, i) => (
               <Card key={i} className="TwoTxtSent__cardWrapper">
                 <Card.Body>
-                  <Card.Title>Cosine Distance: {sent.jwd}</Card.Title>
+                  <Card.Title>Cosine Distance: {Math.round(sent.jwd*100)}%</Card.Title>
                   <Card.Subtitle>Text 1</Card.Subtitle>
                   <Card.Text className="TwoTxtSent__cardText">
                     {sent.sent1}

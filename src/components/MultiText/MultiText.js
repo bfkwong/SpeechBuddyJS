@@ -110,8 +110,8 @@ function MultiText() {
                     <tr key={i}>
                       <td>{an[0]}</td>
                       <td>{an[1]}</td>
-                      <td>{an[2]}</td>
-                      <td>{an[3]}</td>
+                      <td>{Math.round(an[2]*100)}%</td>
+                      <td>{Math.round(an[3]*100)}%</td>
                       <td>
                         <Link
                           to={{
