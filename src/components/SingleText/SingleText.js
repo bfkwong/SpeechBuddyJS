@@ -8,7 +8,7 @@ import {
   Col,
   InputGroup,
   FormControl,
-  Button, ButtonGroup
+  Button, ButtonGroup, ButtonToolbar
 } from "react-bootstrap";
 import "./SingleText.css";
 
@@ -27,7 +27,7 @@ function SingleText() {
 
   const runAnalysis = async () => {
     let wordTok = new natural.WordTokenizer();
-    let tokenizedWords = wordTok.tokenize(transcript || textArea);
+    let tokenizedWords = wordTok.tokenize(textArea || transcript);
 
     let wrdCnt = {};
     tokenizedWords.forEach((word) => {
@@ -129,28 +129,36 @@ function SingleText() {
           </InputGroup>
         </Row>
         <Row className="justify-content-md-center">
-          <Col xs={12} md={4}>
-            <Button
-              variant="primary"
-              className="analyze-button"
-              onClick={() => runAnalysis()}>
-              Analyze
-            </Button>
-          </Col>
-          <Col xs={8} md={12}>
-            <ButtonGroup>
-              <Button onClick={SpeechRecognition.startListening}>
-                <img
-                  width="500" height="500"
-                  src="https://img.pngio.com/record-button-png-6-png-image-record-png-2400_2093.png"
-                  alt="my image"
-                />
-              </Button>
-              <Button onClick={SpeechRecognition.stopListening}>Stop</Button>
-              <Button onClick={resetTranscript}>Clear</Button>
-              
-            </ButtonGroup>
-          </Col>
+            <ButtonToolbar aria-label="Toolbar with button groups">
+              <ButtonGroup className="mr-2" aria-label="First group">
+                <Button
+                className="analyze-button"
+                  onClick={() => runAnalysis()}>
+                  Analyze
+                </Button>
+              </ButtonGroup>
+              <ButtonGroup className="mr-2" aria-label="Second group">
+                <Button 
+                  className="analyze-button"
+                  onClick={SpeechRecognition.startListening}>
+                  <img
+                    width="500" height="500"
+                    src="https://img.pngio.com/record-button-png-6-png-image-record-png-2400_2093.png"
+                    alt="my image"
+                  />
+                </Button>
+                <Button 
+                  className="analyze-button"
+                  onClick={SpeechRecognition.stopListening}>
+                  Stop
+                </Button>
+                <Button 
+                  className="analyze-button"
+                  onClick={resetTranscript}>
+                  Clear
+                </Button>
+              </ButtonGroup>
+            </ButtonToolbar> 
         </Row>
         <Row>
           <SingleTextAnalysis analysis={textAnalysis}></SingleTextAnalysis>

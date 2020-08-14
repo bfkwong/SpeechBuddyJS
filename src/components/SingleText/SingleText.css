@@ -10,9 +10,15 @@
 }
 
 .analyze-button {
-  margin: 20px 0px 10px 0px;
-  width: 100%;
+  margin: 10px 0px 10px 0px;
+  width: 70%;
   background-color: #3587a4 !important;
+  border-color: #3587a4 !important;
+}
+
+.mr-2 {
+  margin: 10px 0px 20px 0px;
+  width: 40%;
   border-color: #3587a4 !important;
 }
 
