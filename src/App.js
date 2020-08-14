@@ -12,7 +12,15 @@ function App() {
     <BrowserRouter>
       <div>
         <Navbar bg="light" expand="lg">
-          <Navbar.Brand href="/SpeechBuddyJS/home">Speech Buddy</Navbar.Brand>
+        <Navbar.Brand href="/SpeechBuddyJS/home">
+          <img
+            src={require("./Images/Logo4.png")}
+            alt="React Bootstrap logo"
+            />
+          </Navbar.Brand>
+          <Navbar.Brand href="/SpeechBuddyJS/home">
+            Speech Buddy
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
