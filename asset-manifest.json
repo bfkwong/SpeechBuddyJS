@@ -1,25 +1,26 @@
 {
   "files": {
-    "main.css": "/SpeechBuddyJS/static/css/main.b89cb6e7.chunk.css",
-    "main.js": "/SpeechBuddyJS/static/js/main.e66037b9.chunk.js",
-    "main.js.map": "/SpeechBuddyJS/static/js/main.e66037b9.chunk.js.map",
+    "main.css": "/SpeechBuddyJS/static/css/main.a8f0b794.chunk.css",
+    "main.js": "/SpeechBuddyJS/static/js/main.8ec75c2f.chunk.js",
+    "main.js.map": "/SpeechBuddyJS/static/js/main.8ec75c2f.chunk.js.map",
     "runtime-main.js": "/SpeechBuddyJS/static/js/runtime-main.dd5a16ed.js",
     "runtime-main.js.map": "/SpeechBuddyJS/static/js/runtime-main.dd5a16ed.js.map",
     "static/css/2.af3c1da9.chunk.css": "/SpeechBuddyJS/static/css/2.af3c1da9.chunk.css",
-    "static/js/2.c4987702.chunk.js": "/SpeechBuddyJS/static/js/2.c4987702.chunk.js",
-    "static/js/2.c4987702.chunk.js.map": "/SpeechBuddyJS/static/js/2.c4987702.chunk.js.map",
+    "static/js/2.cde338dd.chunk.js": "/SpeechBuddyJS/static/js/2.cde338dd.chunk.js",
+    "static/js/2.cde338dd.chunk.js.map": "/SpeechBuddyJS/static/js/2.cde338dd.chunk.js.map",
     "index.html": "/SpeechBuddyJS/index.html",
-    "precache-manifest.858806cbb93ca982d96e5896408d67b7.js": "/SpeechBuddyJS/precache-manifest.858806cbb93ca982d96e5896408d67b7.js",
+    "precache-manifest.b69884ee1f1d642de3cb8dae014c804b.js": "/SpeechBuddyJS/precache-manifest.b69884ee1f1d642de3cb8dae014c804b.js",
     "service-worker.js": "/SpeechBuddyJS/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/SpeechBuddyJS/static/css/2.af3c1da9.chunk.css.map",
-    "static/css/main.b89cb6e7.chunk.css.map": "/SpeechBuddyJS/static/css/main.b89cb6e7.chunk.css.map",
-    "static/js/2.c4987702.chunk.js.LICENSE.txt": "/SpeechBuddyJS/static/js/2.c4987702.chunk.js.LICENSE.txt"
+    "static/css/main.a8f0b794.chunk.css.map": "/SpeechBuddyJS/static/css/main.a8f0b794.chunk.css.map",
+    "static/js/2.cde338dd.chunk.js.LICENSE.txt": "/SpeechBuddyJS/static/js/2.cde338dd.chunk.js.LICENSE.txt",
+    "static/media/recording.gif": "/SpeechBuddyJS/static/media/recording.68a8f698.gif"
   },
   "entrypoints": [
     "static/js/runtime-main.dd5a16ed.js",
     "static/css/2.af3c1da9.chunk.css",
-    "static/js/2.c4987702.chunk.js",
-    "static/css/main.b89cb6e7.chunk.css",
-    "static/js/main.e66037b9.chunk.js"
+    "static/js/2.cde338dd.chunk.js",
+    "static/css/main.a8f0b794.chunk.css",
+    "static/js/main.8ec75c2f.chunk.js"
   ]
 }
