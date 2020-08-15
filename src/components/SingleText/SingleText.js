@@ -1,19 +1,27 @@
 import React, { useState } from "react";
 import natural from "natural";
 import * as toxicity from "@tensorflow-models/toxicity";
-import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
+import SpeechRecognition, {
+  useSpeechRecognition
+} from "react-speech-recognition";
 import {
   Container,
   Row,
   Col,
   InputGroup,
   FormControl,
-  Button, ButtonGroup, ButtonToolbar
+  Button,
+  ButtonGroup,
+  ButtonToolbar,
+  Modal,
+  Spinner
 } from "react-bootstrap";
 import "./SingleText.css";
 
 import StatCard from "../StatCard/StatCard";
 import SingleTextAnalysis from "../SingleTextAnalysis/SingleTextAnalysis";
+
+import RecordingGif from "../../Images/recording.gif";
 
 function SingleText() {
   const [textArea, setTextArea] = useState("");
@@ -22,12 +30,15 @@ function SingleText() {
   const [nounsPerc, setNounsPerc] = useState(0);
   const [adjPerc, setAdjPerc] = useState(0);
   const [textAnalysis, setTextAnalysis] = useState({});
-
+  const [recording, setRecording] = useState(false);
+  const [analysisState, setAnalysisState] = useState("DONE");
   const { transcript, resetTranscript } = useSpeechRecognition();
 
   const runAnalysis = async () => {
+    setAnalysisState("Loading Models ...");
     let wordTok = new natural.WordTokenizer();
-    let tokenizedWords = wordTok.tokenize(textArea || transcript);
+    let toxModel = await toxicity.load();
+    let tokenizedWords = wordTok.tokenize(textArea);
 
     let wrdCnt = {};
     tokenizedWords.forEach((word) => {
@@ -45,15 +56,16 @@ function SingleText() {
     let topTenWords =
       wordCountPair.length > 20 ? wordCountPair.slice(0, 20) : wordCountPair;
 
+    setAnalysisState("Analyzing Sentiment ...");
     let analyzer = new natural.SentimentAnalyzer(
       "English",
       natural.PorterStemmer,
       "afinn"
     );
 
-    let toxModel = await toxicity.load();
+    setAnalysisState("Analyzing for Toxicity ...");
     if (toxModel) {
-      let predictions = await toxModel.classify([textArea || transcript]);
+      let predictions = await toxModel.classify([textArea]);
       if (!predictions) {
         alert("prediction failed");
         return;
@@ -63,6 +75,7 @@ function SingleText() {
         toxicity: predictions,
         topTenWords: topTenWords
       });
+      setAnalysisState("DONE");
     }
   };
 
@@ -96,7 +109,7 @@ function SingleText() {
               aria-label="With textarea"
               rows="15"
               placeholder="Enter your text document here ..."
-              value={textArea || transcript} 
+              value={textArea}
               onChange={(e) => {
                 setTextArea(e.target.value);
                 let wordTok = new natural.WordTokenizer();
@@ -129,41 +142,75 @@ function SingleText() {
           </InputGroup>
         </Row>
         <Row className="justify-content-md-center">
-            <ButtonToolbar aria-label="Toolbar with button groups">
-              <ButtonGroup className="mr-2" aria-label="First group">
-                <Button
+          <ButtonToolbar aria-label="Toolbar with button groups">
+            <ButtonGroup className="mr-2" aria-label="First group">
+              <Button className="analyze-button" onClick={() => runAnalysis()}>
+                Analyze
+              </Button>
+            </ButtonGroup>
+            <ButtonGroup className="mr-2" aria-label="Second group">
+              <Button
                 className="analyze-button"
-                  onClick={() => runAnalysis()}>
-                  Analyze
-                </Button>
-              </ButtonGroup>
-              <ButtonGroup className="mr-2" aria-label="Second group">
-                <Button 
-                  className="analyze-button"
-                  onClick={SpeechRecognition.startListening}>
-                  <img
-                    width="500" height="500"
-                    src="https://img.pngio.com/record-button-png-6-png-image-record-png-2400_2093.png"
-                    alt="my image"
-                  />
-                </Button>
-                <Button 
-                  className="analyze-button"
-                  onClick={SpeechRecognition.stopListening}>
-                  Stop
-                </Button>
-                <Button 
-                  className="analyze-button"
-                  onClick={resetTranscript}>
-                  Clear
-                </Button>
-              </ButtonGroup>
-            </ButtonToolbar> 
+                onClick={() => {
+                  setRecording(true);
+                  SpeechRecognition.startListening();
+                }}>
+                <img
+                  src="https://img.pngio.com/record-button-png-6-png-image-record-png-2400_2093.png"
+                  alt=""
+                />
+              </Button>
+              <Button
+                className="analyze-button"
+                onClick={() => {
+                  resetTranscript();
+                  setTextArea("");
+                }}>
+                Clear
+              </Button>
+            </ButtonGroup>
+          </ButtonToolbar>
         </Row>
-        <Row>
-          <SingleTextAnalysis analysis={textAnalysis}></SingleTextAnalysis>
-        </Row>
+        {analysisState !== "DONE" && (
+          <Row className="justify-content-md-center TwoTxtSent__row">
+            <Col md={1}>
+              <Spinner animation="border" role="status"></Spinner>
+            </Col>
+            <Col md={"auto"}>
+              <h3>{analysisState}</h3>
+            </Col>
+          </Row>
+        )}
+        {textArea !== "" && (
+          <Row>
+            <SingleTextAnalysis analysis={textAnalysis}></SingleTextAnalysis>
+          </Row>
+        )}
       </Container>
+
+      <Modal
+        show={recording}
+        onHide={() => {
+          setRecording(false);
+          SpeechRecognition.startListening().then(() => {
+            setTextArea(textArea + transcript);
+          });
+        }}>
+        <Modal.Header closeButton></Modal.Header>
+        <Modal.Body>Recording ...</Modal.Body>
+        <Modal.Footer>
+          <Button
+            variant="primary"
+            onClick={() => {
+              setRecording(false);
+              SpeechRecognition.startListening().then(() => {
+                setTextArea(textArea + transcript);
+              });
+            }}>
+            Finish Recording
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   );
 }

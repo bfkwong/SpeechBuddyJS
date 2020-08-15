@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from "react";
 import { useDropzone } from "react-dropzone";
-import { Container, Row, Col, Button, Table } from "react-bootstrap";
+import { Container, Row, Col, Button, Table, Spinner } from "react-bootstrap";
 import styled from "styled-components";
 import * as use from "@tensorflow-models/universal-sentence-encoder";
 import * as similarity from "compute-cosine-similarity";
@@ -21,6 +21,7 @@ const StyledDiv = styled.div`
 function MultiText() {
   const [analysis, setAnalysis] = useState([]);
   const [fileContents, setFileContents] = useState([]);
+  const [analysisState, setAnalysisState] = useState("DONE");
 
   const onDrop = useCallback(
     (acceptedFiles) => {
@@ -46,6 +47,7 @@ function MultiText() {
   ));
 
   const runAnalysis = async () => {
+    setAnalysisState("Loading Models ...");
     let model = await use.load();
     let embeddings = await model.embed(fileContents);
     let values = embeddings.arraySync();
@@ -54,6 +56,9 @@ function MultiText() {
     let output = [];
     for (let i = 0; i < arr.length - 1; i++) {
       for (let j = i + 1; j < arr.length; j++) {
+        setAnalysisState(
+          `Analyzing ${filesUpload[i]} and ${filesUpload[j]} ...`
+        );
         let csd = similarity(arr[i], arr[j]);
         let jwd = natural.JaroWinklerDistance(fileContents[i], fileContents[j]);
         output.push([
@@ -67,6 +72,7 @@ function MultiText() {
       }
     }
     setAnalysis(output);
+    setAnalysisState("DONE");
   };
 
   return (
@@ -91,6 +97,16 @@ function MultiText() {
           </Col>
         </Row>
       </Container>
+      {analysisState !== "DONE" && (
+        <Row className="justify-content-md-center TwoTxtSent__row">
+          <Col md={1}>
+            <Spinner animation="border" role="status"></Spinner>
+          </Col>
+          <Col md={"auto"}>
+            <h3>{analysisState}</h3>
+          </Col>
+        </Row>
+      )}
       {analysis.length > 0 && (
         <Container className="MultiTxt__analysisContainer">
           <Row className="justify-content-md-center">
@@ -110,8 +126,8 @@ function MultiText() {
                     <tr key={i}>
                       <td>{an[0]}</td>
                       <td>{an[1]}</td>
-                      <td>{Math.round(an[2]*100)}%</td>
-                      <td>{Math.round(an[3]*100)}%</td>
+                      <td>{Math.round(an[2] * 100)}%</td>
+                      <td>{Math.round(an[3] * 100)}%</td>
                       <td>
                         <Link
                           to={{
