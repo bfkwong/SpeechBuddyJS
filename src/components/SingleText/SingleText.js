@@ -192,12 +192,9 @@ function SingleText() {
         show={recording}
         onHide={() => {
           setRecording(false);
-          SpeechRecognition.startListening().then(() => {
-            setTextArea(textArea + transcript);
-          });
         }}>
-        <Modal.Header closeButton></Modal.Header>
-        <Modal.Body>Recording ...</Modal.Body>
+        <Modal.Header closeButton>Recording...</Modal.Header>
+        <Modal.Body>{transcript}</Modal.Body>
         <Modal.Footer>
           <Button
             variant="primary"
