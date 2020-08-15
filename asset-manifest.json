@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/SpeechBuddyJS/static/css/main.a8f0b794.chunk.css",
-    "main.js": "/SpeechBuddyJS/static/js/main.8ec75c2f.chunk.js",
-    "main.js.map": "/SpeechBuddyJS/static/js/main.8ec75c2f.chunk.js.map",
+    "main.js": "/SpeechBuddyJS/static/js/main.1c02be9a.chunk.js",
+    "main.js.map": "/SpeechBuddyJS/static/js/main.1c02be9a.chunk.js.map",
     "runtime-main.js": "/SpeechBuddyJS/static/js/runtime-main.dd5a16ed.js",
     "runtime-main.js.map": "/SpeechBuddyJS/static/js/runtime-main.dd5a16ed.js.map",
     "static/css/2.af3c1da9.chunk.css": "/SpeechBuddyJS/static/css/2.af3c1da9.chunk.css",
-    "static/js/2.cde338dd.chunk.js": "/SpeechBuddyJS/static/js/2.cde338dd.chunk.js",
-    "static/js/2.cde338dd.chunk.js.map": "/SpeechBuddyJS/static/js/2.cde338dd.chunk.js.map",
+    "static/js/2.c9b144b7.chunk.js": "/SpeechBuddyJS/static/js/2.c9b144b7.chunk.js",
+    "static/js/2.c9b144b7.chunk.js.map": "/SpeechBuddyJS/static/js/2.c9b144b7.chunk.js.map",
     "index.html": "/SpeechBuddyJS/index.html",
-    "precache-manifest.b69884ee1f1d642de3cb8dae014c804b.js": "/SpeechBuddyJS/precache-manifest.b69884ee1f1d642de3cb8dae014c804b.js",
+    "precache-manifest.f191b77549982700fb7b683a06ce5c41.js": "/SpeechBuddyJS/precache-manifest.f191b77549982700fb7b683a06ce5c41.js",
     "service-worker.js": "/SpeechBuddyJS/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/SpeechBuddyJS/static/css/2.af3c1da9.chunk.css.map",
     "static/css/main.a8f0b794.chunk.css.map": "/SpeechBuddyJS/static/css/main.a8f0b794.chunk.css.map",
-    "static/js/2.cde338dd.chunk.js.LICENSE.txt": "/SpeechBuddyJS/static/js/2.cde338dd.chunk.js.LICENSE.txt",
+    "static/js/2.c9b144b7.chunk.js.LICENSE.txt": "/SpeechBuddyJS/static/js/2.c9b144b7.chunk.js.LICENSE.txt",
     "static/media/recording.gif": "/SpeechBuddyJS/static/media/recording.68a8f698.gif"
   },
   "entrypoints": [
     "static/js/runtime-main.dd5a16ed.js",
     "static/css/2.af3c1da9.chunk.css",
-    "static/js/2.cde338dd.chunk.js",
+    "static/js/2.c9b144b7.chunk.js",
     "static/css/main.a8f0b794.chunk.css",
-    "static/js/main.8ec75c2f.chunk.js"
+    "static/js/main.1c02be9a.chunk.js"
   ]
 }
