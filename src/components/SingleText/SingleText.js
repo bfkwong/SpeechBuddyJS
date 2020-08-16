@@ -21,8 +21,6 @@ import "./SingleText.css";
 import StatCard from "../StatCard/StatCard";
 import SingleTextAnalysis from "../SingleTextAnalysis/SingleTextAnalysis";
 
-import RecordingGif from "../../Images/recording.gif";
-
 function SingleText() {
   const [textArea, setTextArea] = useState("");
   const [wordCount, setWordCount] = useState(0);
@@ -192,6 +190,10 @@ function SingleText() {
         show={recording}
         onHide={() => {
           setRecording(false);
+          SpeechRecognition.startListening().then(() => {
+            setTextArea(textArea + transcript);
+            SpeechRecognition.stopListening();
+          });
         }}>
         <Modal.Header closeButton>Recording...</Modal.Header>
         <Modal.Body>{transcript}</Modal.Body>
@@ -202,6 +204,7 @@ function SingleText() {
               setRecording(false);
               SpeechRecognition.startListening().then(() => {
                 setTextArea(textArea + transcript);
+                SpeechRecognition.stopListening();
               });
             }}>
             Finish Recording
