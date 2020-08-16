@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3fe74182a282ad6199d52cc6add8bb67",
+    "revision": "e339fa95c0939390b095117b4445d0ea",
     "url": "/SpeechBuddyJS/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/SpeechBuddyJS/static/css/2.af3c1da9.chunk.css"
   },
   {
-    "revision": "e3adca7d49025a8bf428",
+    "revision": "fc36964382484a7d7512",
     "url": "/SpeechBuddyJS/static/css/main.a8f0b794.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/SpeechBuddyJS/static/js/2.c9b144b7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e3adca7d49025a8bf428",
-    "url": "/SpeechBuddyJS/static/js/main.763af902.chunk.js"
+    "revision": "fc36964382484a7d7512",
+    "url": "/SpeechBuddyJS/static/js/main.71671b4e.chunk.js"
   },
   {
     "revision": "a3ea3735b6c207e295e5",
