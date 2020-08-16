@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/SpeechBuddyJS/precache-manifest.0053b4bd93214ae5275d665d4ffb6d49.js"
+  "/SpeechBuddyJS/precache-manifest.067cc80593b80a8f27b3fdbefb39970e.js"
 );
 
 self.addEventListener('message', (event) => {
