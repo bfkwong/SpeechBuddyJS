@@ -21,6 +21,8 @@ import "./SingleText.css";
 import StatCard from "../StatCard/StatCard";
 import SingleTextAnalysis from "../SingleTextAnalysis/SingleTextAnalysis";
 
+import RecordButton from "../../Images/recordbutton.png";
+
 function SingleText() {
   const [textArea, setTextArea] = useState("");
   const [wordCount, setWordCount] = useState(0);
@@ -151,12 +153,9 @@ function SingleText() {
                 className="analyze-button"
                 onClick={() => {
                   setRecording(true);
-                  SpeechRecognition.startListening();
+                  SpeechRecognition.startListening({ continuous: true });
                 }}>
-                <img
-                  src="https://img.pngio.com/record-button-png-6-png-image-record-png-2400_2093.png"
-                  alt=""
-                />
+                <img src={RecordButton} alt="" />
               </Button>
               <Button
                 className="analyze-button"
@@ -190,10 +189,8 @@ function SingleText() {
         show={recording}
         onHide={() => {
           setRecording(false);
-          SpeechRecognition.startListening().then(() => {
-            setTextArea(textArea + transcript);
-            SpeechRecognition.stopListening();
-          });
+          setTextArea(textArea + transcript);
+          SpeechRecognition.stopListening();
         }}>
         <Modal.Header closeButton>Recording...</Modal.Header>
         <Modal.Body>{transcript}</Modal.Body>
@@ -202,10 +199,8 @@ function SingleText() {
             variant="primary"
             onClick={() => {
               setRecording(false);
-              SpeechRecognition.startListening().then(() => {
-                setTextArea(textArea + transcript);
-                SpeechRecognition.stopListening();
-              });
+              setTextArea(textArea + transcript);
+              SpeechRecognition.stopListening();
             }}>
             Finish Recording
           </Button>
