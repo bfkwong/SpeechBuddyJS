@@ -24,8 +24,8 @@ function MultiText() {
   const [analysisState, setAnalysisState] = useState("DONE");
 
   const onDrop = useCallback(
-    (acceptedFiles) => {
-      acceptedFiles.forEach((file) => {
+    (filesUpload) => {
+      filesUpload.forEach((file) => {
         const reader = new FileReader();
         reader.onload = () => {
           const string = reader.result;
