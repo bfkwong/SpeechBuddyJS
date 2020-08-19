@@ -228,7 +228,7 @@ function TwoTxtSent(props) {
       </Container>
       <Modal show={showModal} onHide={closeModal}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>Single Text Analysis</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <SingleTextAnalysis analysis={textAnalysis}></SingleTextAnalysis>
