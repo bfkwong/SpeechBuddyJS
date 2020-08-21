@@ -1,14 +1,7 @@
-Functional Requirements: 
+Bryan Kwong
 
-Functional Requirement 1 
+1) The system shall provide a record button which will transcribe the user’s speech into a text field.
 
-The system shall provide the ability to check the grammar of the user’s inputs by making a call to the grammar bot API and display the result (as a list) of the API call on the page alerting the user of their grammatical error. 
+2) The system shall analyze given text by presenting the top 10 words in a frequency list.
 
-Functional Requirement 2
-
-The system shall provide the ability check for possible plagiarism by using the Levenshtein, Hamming, and Cosine Similarity distance metric to measure text similarity and use a similarity matrix to display the similarity between the input texts to the user. 
-
-Functional Requirement 3
-
-The system shall transcribe any voice input of a user by uploading an audio file to the Google Cloud Speech to Text API and displaying the resulting text of that API call.
-
+3) The system shall provide a numerical estimate of a speech’s sentiment in the range of [-1,1].
