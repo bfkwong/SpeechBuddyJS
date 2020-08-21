@@ -54,37 +54,40 @@ As an educator, I want a numerical score of how similar certain sentences and pa
 As an educator, I want the option to upload multiple papers of my students’ simultaneously when getting feedback, so that I can quickly go through my students’ papers. 
 
   * **Multitext comp:**
-As a college professor, I want to verify my classroom is not plagiarizing their speeches by copying quotes or phrases from other speeches without citation, so that I can ensure original work from students in my class. 
+As an educator, I want to verify my classroom is not plagiarizing their speeches by copying quotes or phrases from other speeches without citation, so that I can ensure original work from students in my class. 
 
   * **2 Text comp in multitext:**
 As an educator, I want to identify specific papers that are similar to analyze further, so that I can rapidly identify cheaters in my classroom.
 
 ## Functional Requirements 
-**Recording:**
+**Bryan Kwong**
+  * **Recording:**
 The system shall provide a record button which will transcribe the user’s speech into a text field.
 
-**Single Text:**
+  * **Single Text:**
 The system shall analyze given text by presenting the top 10 words in a frequency list.
 
-**Sentiment:**
+  * **Sentiment:**
 The system shall provide a numerical estimate of a speech’s sentiment in the range of [-1,1].
 	
-**Text box:**
+**Steven Gandham**
+  * **Text box:**
 The system shall provide a text box and an “Analyze” button for the user to input and submit their speech for text analysis.
 
-**2 Text comparison:**
+  * **2 Text comparison:**
 The system shall provide an additional text field to submit another speech and compare the two for plagiarism. 
 
-**Cosine:**
+  * **Cosine:**
 The system shall compare similar phrasing between two transcripts and display the most similar sentences in descending order of cosine distance. 
 
-**MultiText upload:**
+**Daniel Tisdale**
+  * **MultiText upload:**
 The system shall provide an upload field for multiple text transcripts files in a portion of the page. 
 
-**Multitext comp:**
+  * **Multitext comp:**
 The system shall compare multiple texts and display the most similar texts along with their cosine distance and Jero-Winkler score in descending order. 
 
-**2 Text comp in multitext:**
+  * **2 Text comp in multitext:**
 The system shall provide a button for the user to further analyze two similar texts and view the most similar sentences based on cosine distance. 
 
 ## Use Cases 
