@@ -29,14 +29,14 @@ Other than that though, Grammarly doesn't do much else. It does one thing well a
 
 
 ## User Stories
-**Bryan Kwong** -
-	**Recording:** 
+**Bryan Kwong**
+  * **Recording:** 
 As a speaker user, I want to speak into an application and have the application provide feedback to me about my speech, so that I can improve as a public speaker. 
 
-**Single Text:**
+  * **Single Text:**
 As a student user, I want to receive feedback on my grammar and word diversity, so that I can improve my speech skills. 
 	
-**Toxicity:**
+  * **Toxicity:**
 As a social media user, I want to see the potential sentiment and toxicity my post may have, so that I can contribute positively on social media.
 
 **2 Text comparison:**
