@@ -1,3 +1,7 @@
-The system shall provide a visual list of [word, frequency] pairs per word in the submitted text file.
-The system shall detect possibly plagiarized phrases and quotes within the submitted text and refresh the page with an updated speech where such matches are highlighted in red.
-The system shall provide a text box and “Submit” button for the user to input and submit their speech for text analysis.
+Steven Gandham
+
+1) The system shall provide a text box and an “Analyze” button for the user to input and submit their speech for text analysis.
+
+2) The system shall provide an additional text field to submit another speech and compare the two for plagiarism.
+
+3) The system shall compare similar phrasing between two transcripts and display the most similar sentences in descending order of cosine distance.
