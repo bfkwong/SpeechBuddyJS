@@ -1,4 +1,4 @@
-![Logo1.jpg](/src/Images/Logo1.jpg)
+![Logo1.png](/src/Images/Logo1.png)
 
 # SpeechBuddyJS
 
@@ -104,4 +104,4 @@ The system shall provide a button for the user to further analyze two similar te
  
 ### Overview Diagram
 
-![OverviewUC.jpg](/src/Images/OverviewUC.jpg)
+![Overview.jpg](/src/Images/Overview.jpg)
