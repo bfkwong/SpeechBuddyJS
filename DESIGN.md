@@ -2,9 +2,18 @@
 
 ## Class Diagrams 
 
-- Authored by Bryan Kwong: [link](https://www.google.com/)
-- Authored by Daniel Tisdale: [link](https://www.google.com/)
-- Authored by Steven Gandham: [link](https://www.google.com/)
+- **Single Text by Bryan Kwong:
+<p align="center">
+  <src="/src/Images/SingleTextCD.jpg" alt="SingleTextCD">
+</p>
+- **Two Text by Steven Gandham: 
+<p align="center">
+  <src="/src/Images/TwoTextCD.jpg" alt="TwoTextCD">
+</p>
+- **Multi Text by Daniel Tisdale 
+<p align="center">
+  <src="/src/Images/MultiTextCD.jpg" alt="TwoTextCD">
+</p>
 
 ## SonarCloud Analysis
 
