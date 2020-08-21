@@ -27,6 +27,14 @@ The pros of grammarly is that it is an incredibly powerful tool for analyzing wh
     * **Cons of Grammarly** - 
 Other than that though, Grammarly doesn't do much else. It does one thing well and not much else.
 
+#### 2. EasyBib
+  * One of EasyBib's tools is plagiarism detection. This feature primarily compares the user's text with online sources to make sure the user in properly citing all of the works they may have used.
+
+    * **Pros of EasyBib** - 
+The pros of EasyBib is the fact that it compares the user's text with a wide array of online sources which can pinpoint specific websites and papers which are being plagiarized from. 
+
+    * **Cons of EasyBib** - 
+The cons of EasyBib is that the tool is mainly targeted for students attempting to avoid plagiarism dectection and is incapable of detecting peer to peer plagiarism. 
 
 ## User Stories
 **Bryan Kwong**
