@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="170" height="170" src="/src/Images/Logo3.png" alt="# SpeechBuddy">
+  <img width="200" height="200" src="/src/Images/Logo3.png" alt="# SpeechBuddy">
 </p>
 
 ## Introduction 
