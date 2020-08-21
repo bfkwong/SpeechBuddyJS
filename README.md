@@ -1,4 +1,4 @@
-![# SpeechBuddy](/src/Images/Logo6.png)
+![# SpeechBuddy](/src/Images/Logo3.png)
 
 ## Introduction 
 
