@@ -1,6 +1,6 @@
 <p align="center">
-  <img width="500" height="500" src="/src/Images/Logo3.png" alt="# SpeechBuddy">
-</p>!
+  <img width="300" height="300" src="/src/Images/Logo3.png" alt="# SpeechBuddy">
+</p>
 
 ## Introduction 
 
