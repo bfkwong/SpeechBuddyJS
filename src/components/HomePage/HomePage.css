@@ -1,0 +1,55 @@
+.flexContainer {
+  display: flex row wrap space-between;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.flexItem {
+  padding: 5px;
+  width: auto;
+  height: auto;
+  margin-top: 10px;
+  text-align: center;
+}
+
+#stars {
+  display: block;
+  max-width:100px;
+  max-height:100px;
+  width: auto;
+  height: auto;
+  margin: auto;
+}
+
+.main{
+  animation: fadein ease 2s;
+}
+
+.overview {
+  animation: fadein ease 3s;
+}
+
+.features {
+  animation: fadein ease 4s;
+    background-image: linear-gradient(-257deg,#a3ffe5,#a3faff 50%,#a3d7ff);
+}
+
+.reviews {
+  animation: fadein ease 5s;
+}
+
+@keyframes fadein {
+  from  {opacity: 0;}
+  to    {opacity:1;}
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  padding: 2em;
+  margin: auto;
+
+}
