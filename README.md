@@ -29,7 +29,7 @@ Other than that though, Grammarly doesn't do much else. It does one thing well a
 
 
 ## User Stories
-## Recording: 
+**Recording:** 
 As a speaker user, I want to speak into an application and have the application provide feedback to me about my speech, so that I can improve as a public speaker. 
 
 ## Single Text:
