@@ -1,5 +1,7 @@
-1. As a student user, I want to receive feedback on my grammar, filler words, and word diversity, so that I can improve my speech skills. 
+Daniel Tisdale
 
-2. As a professional user, I want to be linked to other great speeches that are similar to my own, so that I can create a more inspired and focused speech. 
+1) As an educator, I want the option to upload multiple papers of my students’ simultaneously when getting feedback, so that I can quickly go through my students’ papers.
 
-3. As an educator, I want to compare similar speeches to analyze specific phrasings and word choice, so that I can detect cheating in my classroom.
+2) As an educator, I want to verify my classroom is not plagiarizing their speeches by copying quotes or phrases from other speeches without citation, so that I can ensure original work from students in my class.
+
+3) As an educator, I want to identify specific papers that are similar to analyze further, so that I can rapidly identify cheaters in my classroom.
