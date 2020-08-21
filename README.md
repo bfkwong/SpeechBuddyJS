@@ -1,4 +1,6 @@
-![# SpeechBuddy](/src/Images/Logo3.png)
+<p align="center">
+  <img width="500" height="500" src="/src/Images/Logo3.png" alt="# SpeechBuddy">
+</p>!
 
 ## Introduction 
 
