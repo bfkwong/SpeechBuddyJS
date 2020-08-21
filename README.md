@@ -1,3 +1,5 @@
+![Logo1.jpg](/src/Images/Logo1.jpg)
+
 # SpeechBuddyJS
 
 ## Introduction 
@@ -101,3 +103,5 @@ The system shall provide a button for the user to further analyze two similar te
 ## Use Cases 
  
 ### Overview Diagram
+
+![OverviewUC.jpg](/src/Images/OverviewUC.jpg)
