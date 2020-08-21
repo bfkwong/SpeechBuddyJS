@@ -2,15 +2,15 @@
 
 ## Class Diagrams 
 
-- **Single Text by Bryan Kwong:
+- Single Text by Bryan Kwong:
 <p align="center">
   <src="/src/Images/SingleTextCD.jpg" alt="SingleTextCD">
 </p>
-- **Two Text by Steven Gandham: 
+- Two Text by Steven Gandham: 
 <p align="center">
   <src="/src/Images/TwoTextCD.jpg" alt="TwoTextCD">
 </p>
-- **Multi Text by Daniel Tisdale 
+- Multi Text by Daniel Tisdale 
 <p align="center">
   <src="/src/Images/MultiTextCD.jpg" alt="TwoTextCD">
 </p>
