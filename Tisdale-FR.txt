@@ -1,5 +1,7 @@
-1. The system shall provide an upload field for upto 2 text transcripts as a .docx, .txt, or pasted into a portion of the page. 
+Daniel Tisdale
 
-2. The system shall analyze given text by presenting the top 10 words in a frequency list.
+1) The system shall provide an upload field for multiple text transcripts files in a portion of the page.
 
-3. The system shall compare similar phrasing between transcripts and display the top 5 longest identical phrasings as well as display the top 10 largest words that the two have in common. 
+2) The system shall compare multiple texts and display the most similar texts along with their cosine distance and Jero-Winkler score in descending order.
+
+3) The system shall provide a button for the user to further analyze two similar texts and view the most similar sentences based on cosine distance.
