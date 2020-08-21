@@ -19,12 +19,12 @@ SpeechBuddyJS aims to be the go to tool for text analysis. It combines the featu
 While there are related systems, no systems is quite like ours with the combination of its features. There are a lot of services out there that does some of what SpeechBuddyJS does, but the unique feature of SpeechBuddyJS is that it brings it all into one simple interface. We will discuss some systems out there that is also in the business of text analysis. 
 
 #### 1. Grammarly 
-Grammarly is a great tool for analysis whether or not there are grammatical mistakes in your text. It is a feature that is accessible through SpeechBuddyJS if you enable the Grammarly chrome plugin. 
+  * Grammarly is a great tool for analysis whether or not there are grammatical mistakes in your text. It is a feature that is accessible through SpeechBuddyJS if you enable the Grammarly chrome plugin. 
 
-**Pros of Grammarly** - 
+    * **Pros of Grammarly** - 
 The pros of grammarly is that it is an incredibly powerful tool for analyzing whether or not your text is grammatically correct. It is the best tool available for AI grammar correction
 
-**Cons of Grammarly** - 
+    * **Cons of Grammarly** - 
 Other than that though, Grammarly doesn't do much else. It does one thing well and not much else.
 
 
