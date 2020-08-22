@@ -2,7 +2,7 @@
 
 ## Class Diagrams 
 
-  * Single Text by Bryan Kwong:
+# Single Text by Bryan Kwong:
 <p align="center">
   <img src="/src/Images/SingleTextCD.jpg" alt="SingleTextCD">
 </p>
