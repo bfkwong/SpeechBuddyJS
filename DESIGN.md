@@ -5,7 +5,7 @@
 ### Single Text by Bryan Kwong:
 <p align="center">
   <img src="/src/Images/SingleTextCD.jpg" alt="SingleTextCD">
-</p>
+
 ### Two Text by Steven Gandham: 
 <p align="center">
   <img src="/src/Images/TwoTextCD.jpg" alt="TwoTextCD">
