@@ -4,7 +4,7 @@ import { Radar, Bar } from "react-chartjs-2";
 import "./SingleTextAnalysis.css";
 
 function SingleTextAnalysis(props) {
-  if (props.analysis.sentiment === undefined) {
+  if (props.analysis === undefined || props.analysis.sentiment === undefined) {
     return <div></div>;
   }
 

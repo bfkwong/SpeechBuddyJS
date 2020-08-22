@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomePage HomePage snapshot test 1`] = `
+<div
+  className="flexContainer"
+>
+  <header
+    className="header"
+  >
+    <div
+      className="main flexItem"
+    >
+      <h1>
+        Welcome to SpeechBuddy
+      </h1>
+      <h5>
+        A Free Text and Speech Analyzer
+      </h5>
+      <h6>
+        For Students and Teachers Alike
+      </h6>
+    </div>
+    <div
+      className="overview flexItem"
+    >
+      <h2>
+        Speech Buddy Overview
+      </h2>
+      <p>
+        Speech Buddy is a text and speech analysis toolkit for quick statistics and visualizations on any given text.
+      </p>
+    </div>
+  </header>
+  <header
+    className="features flexItem"
+  >
+    <h2>
+       Analyze Text Tone & Word Variance for Single Text Speeches 
+    </h2>
+    <div>
+      <p>
+        Check the tone of your text before you perform in front of an audience. Ensure that your audience reacts the way you expect depending on your intended tone:
+      </p>
+      <ul>
+        <li>
+          <a
+            href="/SpeechBuddyJS/single_text"
+            onClick={[Function]}
+          >
+            Single Text Analysis
+          </a>
+        </li>
+      </ul>
+    </div>
+    <h2>
+       Plagiarism and Similarity Comparison Between 2+ Text Speeches 
+    </h2>
+    <div>
+      <p>
+        Compare two or more .txt files for speech similarity:
+      </p>
+      <ul>
+        <li>
+          <a
+            href="/SpeechBuddyJS/two_txt_plag"
+            onClick={[Function]}
+          >
+            Two Text Analysis
+          </a>
+        </li>
+        <li>
+          <a
+            href="/SpeechBuddyJS/multi_text"
+            onClick={[Function]}
+          >
+            Multi Text Analysis
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <header
+    className="reviews flexItem"
+  >
+    <h2>
+      Satisfied User Reviews
+    </h2>
+    <div>
+      <img
+        alt="5Stars"
+        id="stars"
+        src="Stars.png"
+      />
+      <p>
+        "SpeechBuddy is wonderful! I used to have to manually check each essay for plagiarism but now that it's automated I don't have to! I give it a 9/9 for quality tools and a 1/1 for aesthetic. Total 10/10!"
+      </p>
+      <span>
+        - Karen J. (High School Teacher)
+      </span>
+      <img
+        alt="5Stars"
+        id="stars"
+        src="Stars.png"
+      />
+      <p>
+        "This was a very helpful tool when writing speeches for my Speech Writing class. The sentiment and toxicity analysis helps me better gauge how my audience would feel during my presentation! Definitely recommend utilizing before a big presentation!"
+      </p>
+      <span>
+        - Smar T. (Harvard Student)
+      </span>
+      <img
+        alt="5Stars"
+        id="stars"
+        src="Stars.png"
+      />
+      <p>
+        "My dad like this alot."
+      </p>
+      <span>
+        - Smar T. Jr. (Preschool Student)
+      </span>
+    </div>
+  </header>
+</div>
+`;

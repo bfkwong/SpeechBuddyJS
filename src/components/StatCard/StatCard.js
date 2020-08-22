@@ -6,8 +6,8 @@ function StatCard(props) {
   return (
     <Card className="card-padding">
       <Card.Body>
-        <Card.Title>{props.value}</Card.Title>
-        <Card.Subtitle className="mb-2 text-muted">
+        <Card.Title data-testid="SC_value">{props.value}</Card.Title>
+        <Card.Subtitle className="mb-2 text-muted" data-testid="SC_description">
           {props.description}
         </Card.Subtitle>
       </Card.Body>

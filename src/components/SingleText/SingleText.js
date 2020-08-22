@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "regenerator-runtime/runtime";
 import natural from "natural";
 import * as toxicity from "@tensorflow-models/toxicity";
 import SpeechRecognition, {
@@ -79,13 +80,42 @@ function SingleText() {
     }
   };
 
+  const updateLexicalAnalysis = (e) => {
+    setTextArea(e.target.value);
+    let wordTok = new natural.WordTokenizer();
+    let tokenizedWords = wordTok.tokenize(e.target.value);
+    setWordCount(tokenizedWords.length);
+
+    let sentTok = new natural.SentenceTokenizer();
+    setSentenceCount(sentTok.tokenize(e.target.value).length);
+
+    let lexicon = new natural.Lexicon("EN", "N", "NNP");
+    let ruleSet = new natural.RuleSet("EN");
+    let tagger = new natural.BrillPOSTagger(lexicon, ruleSet);
+    let taggedWordsSep = tagger.tag(tokenizedWords).taggedWords;
+
+    let nouns = taggedWordsSep.filter(
+      (w) =>
+        w.tag === "NN" || w.tag === "NNS" || w.tag === "NNP" || w.tag === "NNPS"
+    );
+    let adjs = taggedWordsSep.filter(
+      (w) => w.tag === "JJ" || w.tag === "JJS" || w.tag === "JJR"
+    );
+
+    setNounsPerc(nouns.length / taggedWordsSep.length || 0);
+    setAdjPerc(adjs.length / taggedWordsSep.length || 0);
+  };
+
   return (
     <div className="TopLevelDisplay">
       <h1>Single Text Analysis</h1>
       <Container>
         <Row className="justify-content-md-center">
           <Col md={3} xs={6}>
-            <StatCard value={wordCount} description="Words"></StatCard>
+            <StatCard
+              value={wordCount}
+              description="Words"
+              data-testid="WordCount"></StatCard>
           </Col>
           <Col md={3} xs={6}>
             <StatCard value={sentenceCount} description="Sentences"></StatCard>
@@ -110,34 +140,8 @@ function SingleText() {
               rows="15"
               placeholder="Enter your text document here ..."
               value={textArea}
-              onChange={(e) => {
-                setTextArea(e.target.value);
-                let wordTok = new natural.WordTokenizer();
-                let tokenizedWords = wordTok.tokenize(e.target.value);
-                setWordCount(tokenizedWords.length);
-
-                let sentTok = new natural.SentenceTokenizer();
-                setSentenceCount(sentTok.tokenize(e.target.value).length);
-
-                let lexicon = new natural.Lexicon("EN", "N", "NNP");
-                let ruleSet = new natural.RuleSet("EN");
-                let tagger = new natural.BrillPOSTagger(lexicon, ruleSet);
-                let taggedWordsSep = tagger.tag(tokenizedWords).taggedWords;
-
-                let nouns = taggedWordsSep.filter(
-                  (w) =>
-                    w.tag === "NN" ||
-                    w.tag === "NNS" ||
-                    w.tag === "NNP" ||
-                    w.tag === "NNPS"
-                );
-                let adjs = taggedWordsSep.filter(
-                  (w) => w.tag === "JJ" || w.tag === "JJS" || w.tag === "JJR"
-                );
-
-                setNounsPerc(nouns.length / taggedWordsSep.length || 0);
-                setAdjPerc(adjs.length / taggedWordsSep.length || 0);
-              }}
+              onChange={updateLexicalAnalysis}
+              data-testid="SingleTextTA"
             />
           </InputGroup>
         </Row>
@@ -159,6 +163,7 @@ function SingleText() {
               </Button>
               <Button
                 className="analyze-button"
+                data-testid="SingleTextCLR"
                 onClick={() => {
                   resetTranscript();
                   setTextArea("");

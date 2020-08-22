@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TwoTxtSent Component TwoTxtSent snapshot test 1`] = `
+<div
+  className="TopLevelDisplay"
+>
+  <h1>
+    Two Text Analysis
+  </h1>
+  <div
+    className="container"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col"
+      >
+        <h3>
+          Text 1
+        </h3>
+        <div
+          className="input-group"
+        >
+          <textarea
+            aria-label="With textarea"
+            className="main-text-area form-control"
+            onChange={[Function]}
+            placeholder="Enter your text document here ..."
+            rows="15"
+            value=""
+          />
+        </div>
+        <button
+          className="analyze-button btn btn-primary"
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+        >
+          Analyze Text 1
+        </button>
+      </div>
+      <div
+        className="col"
+      >
+        <h3>
+          Text 2
+        </h3>
+        <div
+          className="input-group"
+        >
+          <textarea
+            aria-label="With textarea"
+            className="main-text-area form-control"
+            onChange={[Function]}
+            placeholder="Enter your text document here ..."
+            rows="15"
+            value=""
+          />
+        </div>
+        <button
+          className="analyze-button btn btn-primary"
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+        >
+          Analyze Text 2
+        </button>
+      </div>
+    </div>
+    <div
+      className="justify-content-md-center row"
+    >
+      <div
+        className="col-md-4 col-12"
+      >
+        <button
+          className="analyze-button btn btn-primary"
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+        >
+          Analyze For Plagiarism
+        </button>
+      </div>
+    </div>
+    <div
+      className="row"
+    >
+      <div
+        className="TwoTxtSent__col col"
+      />
+    </div>
+  </div>
+</div>
+`;

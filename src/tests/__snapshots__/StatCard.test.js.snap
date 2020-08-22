@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StatCard Component StatCard snapshot test 1`] = `
+<div
+  className="card-padding card"
+>
+  <div
+    className="card-body"
+  >
+    <div
+      className="card-title h5"
+      data-testid="SC_value"
+    />
+    <div
+      className="mb-2 text-muted card-subtitle h6"
+      data-testid="SC_description"
+    />
+  </div>
+</div>
+`;
+
+exports[`StatCard Component StatCard snapshot test 2`] = `
+<div
+  className="card-padding card"
+>
+  <div
+    className="card-body"
+  >
+    <div
+      className="card-title h5"
+      data-testid="SC_value"
+    >
+      100
+    </div>
+    <div
+      className="mb-2 text-muted card-subtitle h6"
+      data-testid="SC_description"
+    >
+      Test
+    </div>
+  </div>
+</div>
+`;
