@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/SpeechBuddyJS/static/css/main.74cde1cc.chunk.css",
-    "main.js": "/SpeechBuddyJS/static/js/main.bf4058f3.chunk.js",
-    "main.js.map": "/SpeechBuddyJS/static/js/main.bf4058f3.chunk.js.map",
+    "main.css": "/SpeechBuddyJS/static/css/main.45812958.chunk.css",
+    "main.js": "/SpeechBuddyJS/static/js/main.f6a71d3f.chunk.js",
+    "main.js.map": "/SpeechBuddyJS/static/js/main.f6a71d3f.chunk.js.map",
     "runtime-main.js": "/SpeechBuddyJS/static/js/runtime-main.dd5a16ed.js",
     "runtime-main.js.map": "/SpeechBuddyJS/static/js/runtime-main.dd5a16ed.js.map",
     "static/css/2.af3c1da9.chunk.css": "/SpeechBuddyJS/static/css/2.af3c1da9.chunk.css",
-    "static/js/2.87362561.chunk.js": "/SpeechBuddyJS/static/js/2.87362561.chunk.js",
-    "static/js/2.87362561.chunk.js.map": "/SpeechBuddyJS/static/js/2.87362561.chunk.js.map",
+    "static/js/2.51f7f1b7.chunk.js": "/SpeechBuddyJS/static/js/2.51f7f1b7.chunk.js",
+    "static/js/2.51f7f1b7.chunk.js.map": "/SpeechBuddyJS/static/js/2.51f7f1b7.chunk.js.map",
     "index.html": "/SpeechBuddyJS/index.html",
-    "precache-manifest.f0a3b0438af0b41b4be93a0385126aa9.js": "/SpeechBuddyJS/precache-manifest.f0a3b0438af0b41b4be93a0385126aa9.js",
+    "precache-manifest.20e94cb519ecfb52524d49f46dff29ef.js": "/SpeechBuddyJS/precache-manifest.20e94cb519ecfb52524d49f46dff29ef.js",
     "service-worker.js": "/SpeechBuddyJS/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/SpeechBuddyJS/static/css/2.af3c1da9.chunk.css.map",
-    "static/css/main.74cde1cc.chunk.css.map": "/SpeechBuddyJS/static/css/main.74cde1cc.chunk.css.map",
-    "static/js/2.87362561.chunk.js.LICENSE.txt": "/SpeechBuddyJS/static/js/2.87362561.chunk.js.LICENSE.txt",
+    "static/css/main.45812958.chunk.css.map": "/SpeechBuddyJS/static/css/main.45812958.chunk.css.map",
+    "static/js/2.51f7f1b7.chunk.js.LICENSE.txt": "/SpeechBuddyJS/static/js/2.51f7f1b7.chunk.js.LICENSE.txt",
     "static/media/recordbutton.png": "/SpeechBuddyJS/static/media/recordbutton.42c2d624.png"
   },
   "entrypoints": [
     "static/js/runtime-main.dd5a16ed.js",
     "static/css/2.af3c1da9.chunk.css",
-    "static/js/2.87362561.chunk.js",
-    "static/css/main.74cde1cc.chunk.css",
-    "static/js/main.bf4058f3.chunk.js"
+    "static/js/2.51f7f1b7.chunk.js",
+    "static/css/main.45812958.chunk.css",
+    "static/js/main.f6a71d3f.chunk.js"
   ]
 }
