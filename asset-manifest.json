@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/SpeechBuddyJS/static/css/main.74cde1cc.chunk.css",
-    "main.js": "/SpeechBuddyJS/static/js/main.c84e3078.chunk.js",
-    "main.js.map": "/SpeechBuddyJS/static/js/main.c84e3078.chunk.js.map",
+    "main.js": "/SpeechBuddyJS/static/js/main.d1bede1a.chunk.js",
+    "main.js.map": "/SpeechBuddyJS/static/js/main.d1bede1a.chunk.js.map",
     "runtime-main.js": "/SpeechBuddyJS/static/js/runtime-main.dd5a16ed.js",
     "runtime-main.js.map": "/SpeechBuddyJS/static/js/runtime-main.dd5a16ed.js.map",
     "static/css/2.af3c1da9.chunk.css": "/SpeechBuddyJS/static/css/2.af3c1da9.chunk.css",
     "static/js/2.6164d544.chunk.js": "/SpeechBuddyJS/static/js/2.6164d544.chunk.js",
     "static/js/2.6164d544.chunk.js.map": "/SpeechBuddyJS/static/js/2.6164d544.chunk.js.map",
     "index.html": "/SpeechBuddyJS/index.html",
-    "precache-manifest.d2ea579d9d2439140208e31361f0d334.js": "/SpeechBuddyJS/precache-manifest.d2ea579d9d2439140208e31361f0d334.js",
+    "precache-manifest.e62467359899d6e94920eb63751470d9.js": "/SpeechBuddyJS/precache-manifest.e62467359899d6e94920eb63751470d9.js",
     "service-worker.js": "/SpeechBuddyJS/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/SpeechBuddyJS/static/css/2.af3c1da9.chunk.css.map",
     "static/css/main.74cde1cc.chunk.css.map": "/SpeechBuddyJS/static/css/main.74cde1cc.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.af3c1da9.chunk.css",
     "static/js/2.6164d544.chunk.js",
     "static/css/main.74cde1cc.chunk.css",
-    "static/js/main.c84e3078.chunk.js"
+    "static/js/main.d1bede1a.chunk.js"
   ]
 }
