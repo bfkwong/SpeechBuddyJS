@@ -2,15 +2,15 @@
 
 ## Class Diagrams 
 
-### Single Text Class Diagram by Bryan Kwong:
+#### Single Text Class Diagram by Bryan Kwong:
 <p align="center">
   <img src="/src/Images/SingleTextCD.jpg" alt="SingleTextCD">
 
-### Two Text Class Diagram by Steven Gandham: 
+#### Two Text Class Diagram by Steven Gandham: 
 <p align="center">
   <img src="/src/Images/TwoTextCD.jpg" alt="TwoTextCD">
 
-### Multi Text Class Diagram by Daniel Tisdale 
+#### Multi Text Class Diagram by Daniel Tisdale 
 <p align="center">
   <img src="/src/Images/MultiTextCD.jpg" alt="TwoTextCD">
 </p>
@@ -19,7 +19,7 @@
 
 The link to the SonarCloud analysis is [here](https://sonarcloud.io/dashboard?id=bfkwong_SpeechBuddyJS). If the link is broken, the url is (https://sonarcloud.io/dashboard?id=bfkwong_SpeechBuddyJS)
 
-## Design Pattern 
+## Design Patterns
 
 ### 1. Stateful Behavioral Pattern 
 
