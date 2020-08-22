@@ -4,7 +4,7 @@
 
 - Single Text by Bryan Kwong:
 <p align="center">
-  <src="/src/Images/SingleTextCD.jpg" alt="SingleTextCD">
+  <height=300 width=500 src="/src/Images/SingleTextCD.jpg" alt="SingleTextCD">
 </p>
 - Two Text by Steven Gandham: 
 <p align="center">
