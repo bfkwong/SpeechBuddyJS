@@ -194,7 +194,7 @@ function SingleText() {
         show={recording}
         onHide={() => {
           setRecording(false);
-          setTextArea(textArea + transcript);
+          resetTranscript();
           SpeechRecognition.stopListening();
         }}>
         <Modal.Header closeButton>Recording...</Modal.Header>
@@ -205,6 +205,7 @@ function SingleText() {
             onClick={() => {
               setRecording(false);
               setTextArea(textArea + transcript);
+              resetTranscript();
               SpeechRecognition.stopListening();
             }}>
             Finish Recording
