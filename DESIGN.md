@@ -8,11 +8,11 @@
 </p>
 - Two Text by Steven Gandham: 
 <p align="center">
-  <src="/src/Images/TwoTextCD.jpg" alt="TwoTextCD">
+  <img src="/src/Images/TwoTextCD.jpg" alt="TwoTextCD">
 </p>
 - Multi Text by Daniel Tisdale 
 <p align="center">
-  <src="/src/Images/MultiTextCD.jpg" alt="TwoTextCD">
+  <img src="/src/Images/MultiTextCD.jpg" alt="TwoTextCD">
 </p>
 
 ## SonarCloud Analysis
