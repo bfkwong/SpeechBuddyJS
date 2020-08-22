@@ -13,10 +13,20 @@ function App() {
     <BrowserRouter>
       <div>
         <Navbar bg="light" expand="lg">
-          <Navbar.Brand href="/SpeechBuddyJS/home">
-            <img src={Logo3} alt="Logo" />
+          <Navbar.Brand as="span">
+            <Link
+              to="/SpeechBuddyJS/home"
+              style={{ color: "black", textDecoration: "none" }}>
+              <img src={Logo3} alt="Logo" />{" "}
+            </Link>
           </Navbar.Brand>
-          <Navbar.Brand href="/SpeechBuddyJS/home">Speech Buddy</Navbar.Brand>
+          <Navbar.Brand as="span">
+            <Link
+              to="/SpeechBuddyJS/home"
+              style={{ color: "black", textDecoration: "none" }}>
+              Speech Buddy
+            </Link>
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
