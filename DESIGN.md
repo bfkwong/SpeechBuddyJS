@@ -40,3 +40,5 @@ The other design pattern that we used was the Composite pattern. In this design 
 </p>
 
 The benefits of this design pattern is so that we can interface with the SingleText, TwoText, and MultiText pages in the same way, and so forth, all the way down to the button level. This design pattern simplifies the logic of the code and avoids having to write dedicated code for the App's interaction with SingleText, TwoText, and MultiText pages.
+
+An additional benefit of this design pattern is that all of these components are reusable. On example is when you go to the TwoText analysis page and run the analysis on a single text, it is the same component from the SingleText analysis page. The reusability of these components such as the buttons, text boxes, and most impressively the analysis display, is the most beneficial feature of this design pattern.
